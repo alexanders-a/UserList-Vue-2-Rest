@@ -1,0 +1,21 @@
+.carousel-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(
+    34deg,
+    rgba(110, 85, 195, 1) 21%,
+    rgba(17, 114, 228, 1) 100%
+  );
+}
+.carousel {
+  width: 600px;
+}
+.img{
+  border-radius: 20px;
+  width: 300px;
+}

@@ -1,0 +1,33 @@
+$small: 440px;
+.app {
+  font-family: sans-serif;
+  font-size: 2vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  background: linear-gradient(
+    34deg,
+    rgba(110, 85, 195, 1) 21%,
+    rgba(17, 114, 228, 1) 100%
+  );
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 2vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  user-select: none;
+}
+@media screen and (max-width: $small) {
+  .app {
+    font-size: 1px;
+    height: fit-content
+
+  }
+}

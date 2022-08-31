@@ -1,0 +1,41 @@
+@mixin element($w, $h) {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $w;
+  height: $h;
+  background: #314b99;
+  transform: translate(-50%, -50%);
+}
+
+.button_plus {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: #d6dbeb;
+  transition: 0.2s;
+  &:after {
+    @include element(50%, 2px);
+  }
+  &:before {
+    @include element(2px, 50%);
+  }
+  transform: scale(1.1);
+}
+
+.button_plus:hover:before,
+.button_plus:hover:after {
+  background: #fff;
+  transition: 0.2s;
+}
+
+.button_plus:hover {
+  background-color: #314b99;
+  transition: 0.2s;
+  transform: scale(1.2);
+}

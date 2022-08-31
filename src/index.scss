@@ -1,0 +1,46 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1vmax;
+  color: rgb(12, 12, 12);
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0px; /* высота для горизонтального скролла */
+}
+::-webkit-scrollbar-track {
+  opacity: 1;
+  background: linear-gradient(
+    34deg,
+    rgba(110, 85, 195, 1) 21%,
+    rgba(17, 114, 228, 1) 100%
+  );
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 20px;
+}

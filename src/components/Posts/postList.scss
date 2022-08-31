@@ -1,0 +1,69 @@
+$xl: 681px;
+
+.blog_post {
+  background: #fff;
+  margin: 20px;
+  width: 600px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.container_copy {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  p {
+    font-size: 15px;
+  }
+}
+
+.img_pod {
+  height: 110px;
+  width: 110px;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  z-index: 10;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    34deg,
+    rgba(110, 85, 195, 1) 21%,
+    rgba(17, 114, 228, 1) 100%
+  );
+}
+.blur {
+  filter: blur(1px);
+}
+.modal-button {
+  margin: 20px;
+}
+@media screen and (max-width: $xl) {
+  .blog_post {
+    background: #fff;
+    margin: 10px;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.3);
+  }
+  .container_copy {
+    font-size: 14px;
+    p {
+      font-size: 11px;
+    }
+  }
+}

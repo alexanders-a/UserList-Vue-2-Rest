@@ -1,0 +1,38 @@
+$xl: 547px;
+
+.flex-albums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(
+    34deg,
+    rgba(110, 85, 195, 1) 21%,
+    rgba(17, 114, 228, 1) 100%
+  );
+  padding: 20px;
+}
+.wrapper-albums {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 5px;
+  width: 500px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+@media screen and (max-width: $xl) {
+  .wrapper-albums {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 5px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+}
