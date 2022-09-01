@@ -10,17 +10,15 @@ export default {
   methods: {
     ...mapMutations({
       show: "post/showModal",
-      hide: "post/hideEdit",
     }),
     showModal() {
-      this.hide();
       this.show();
     },
   },
 
   computed: {
     ...mapState({
-      show: "post/modalVisible",
+      modalVisible: (state) => state.post.modalVisible,
     }),
   },
 };

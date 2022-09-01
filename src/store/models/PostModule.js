@@ -3,8 +3,6 @@ import axios from "axios";
 export default {
   state: () => ({
     posts: [],
-    title: "",
-    body: "",
     modalVisible: false,
     isEdit: false,
     isPostsLoading: false,
@@ -31,10 +29,14 @@ export default {
       state.isEdit = false;
     },
 
-    updatePost: (state, { index, data }) => {
-      state.posts[index].completed = data.completed;
-      state.posts.save(state.posts);
+    updatePost: (state, post2) => {
+      const index = state.posts.findIndex((post) => post.id == post2.id);
+      if (index) {
+        state.posts.splice(index, 1, post2);
+      }
     },
+    deletePost: (state, id) =>
+      (state.posts = state.posts.filter((post) => post.id !== id)),
   },
   actions: {
     async fetchPosts({ commit }) {
@@ -52,10 +54,21 @@ export default {
     },
     async createPost({ commit }, obj) {
       const response = await axios.post(
-        "https://jsonplaceholder.typicode.com/posts",
+        `https://jsonplaceholder.typicode.com/posts?userId=${obj.userId}`,
         obj
       );
       commit("addPost", response.data);
+    },
+    async updatePost({ commit }, obj) {
+      const response = await axios.put(
+        `https://jsonplaceholder.typicode.com/posts/${obj.id}`,
+        obj
+      );
+      commit("updatePost", response.data);
+    },
+    async deletePost({ commit }, id) {
+      commit("deletePost", id);
+      await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
     },
   },
   namespaced: true,

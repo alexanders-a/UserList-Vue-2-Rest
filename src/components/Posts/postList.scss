@@ -1,15 +1,15 @@
 $xl: 681px;
 
-.blog_post {
+.blog-post {
   background: #fff;
   margin: 20px;
   width: 600px;
-  height: 350px;
+  min-height: 450px;
   border-radius: 10px;
   box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.3);
 }
 
-.container_copy {
+.container-copy {
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -51,19 +51,32 @@ $xl: 681px;
 .modal-button {
   margin: 20px;
 }
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
 @media screen and (max-width: $xl) {
-  .blog_post {
+  .blog-post {
     background: #fff;
     margin: 10px;
     width: 300px;
-    height: 350px;
+    min-height: 350px;
     border-radius: 10px;
     box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.3);
   }
-  .container_copy {
+  .container-copy {
     font-size: 14px;
     p {
       font-size: 11px;
     }
+    .icons {
+      width: 200px;
+    }
+  }
+  .is-mobile-input{
+    width: 120px;
   }
 }

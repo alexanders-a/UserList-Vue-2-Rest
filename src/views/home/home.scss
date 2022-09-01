@@ -24,10 +24,3 @@ $small: 440px;
   padding: 20px;
   user-select: none;
 }
-@media screen and (max-width: $small) {
-  .app {
-    font-size: 1px;
-    height: fit-content
-
-  }
-}
